@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact name="agent:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/agent_jar</output-path>
+    <root id="root">
+      <element id="archive" name="agent.jar">
+        <element id="directory" name="META-INF">
+          <element id="file-copy" path="$PROJECT_DIR$/agent/META-INF/MANIFEST.MF" />
+        </element>
+        <element id="module-output" name="agent" />
+      </element>
+      <element id="library" level="project" name="org.ow2.asm:asm-all:4.1" />
+    </root>
+  </artifact>
+</component>
