@@ -45,6 +45,14 @@ public final class MainTest {
     throw new RuntimeException(MARKER_EXCEPTION_MESSAGE);
   }
 
+  private boolean equalsDonor(Object o) {
+    if (o != null && o.getClass() == String.class) {
+      throw new RuntimeException(MARKER_EXCEPTION_MESSAGE);
+    } else {
+      return this == o;
+    }
+  }
+
   private void expectMarkerException() {
     expectedException.expect(RuntimeException.class);
     expectedException.expectMessage(MARKER_EXCEPTION_MESSAGE);
@@ -56,6 +64,17 @@ public final class MainTest {
 
     expectMarkerException();
     foo();
+  }
+
+  @Test
+  public void testPatchedEquals() throws Exception {
+    patcher.patchMethod(
+        Object.class, "equals",
+        MainTest.class, "equalsDonor"
+    );
+
+    expectMarkerException();
+    new Object().equals("dummy");
   }
 
   @Test
