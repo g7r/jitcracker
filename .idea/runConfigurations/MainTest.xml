@@ -1,19 +1,13 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="MainTest.testPatchedCos" type="JUnit" factoryName="JUnit">
-    <extension name="coverage" enabled="false" merge="false" runner="idea">
-      <pattern>
-        <option name="PATTERN" value="com.mailru.allodsteam.jitcracker.main.*" />
-        <option name="ENABLED" value="true" />
-      </pattern>
-    </extension>
+  <configuration default="false" name="MainTest" type="JUnit" factoryName="JUnit">
     <module name="main" />
     <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
     <option name="ALTERNATIVE_JRE_PATH" value="" />
     <option name="PACKAGE_NAME" value="com.mailru.allodsteam.jitcracker.main" />
     <option name="MAIN_CLASS_NAME" value="com.mailru.allodsteam.jitcracker.main.MainTest" />
-    <option name="METHOD_NAME" value="testPatchedCos" />
-    <option name="TEST_OBJECT" value="method" />
-    <option name="VM_PARAMETERS" value="-javaagent:out/artifacts/agent_jar/agent.jar" />
+    <option name="METHOD_NAME" value="" />
+    <option name="TEST_OBJECT" value="class" />
+    <option name="VM_PARAMETERS" value="-ea -javaagent:out/artifacts/agent_jar/agent.jar" />
     <option name="PARAMETERS" value="" />
     <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
     <option name="ENV_VARIABLES" />
@@ -29,6 +23,10 @@
       <option name="LOCAL" value="true" />
     </RunnerSettings>
     <ConfigurationWrapper RunnerId="Debug" />
-    <method />
+    <method>
+      <option name="BuildArtifacts" enabled="true">
+        <artifact name="agent:jar" />
+      </option>
+    </method>
   </configuration>
 </component>
